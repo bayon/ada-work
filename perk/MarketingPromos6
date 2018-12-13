@@ -320,21 +320,21 @@ protected String GetMarketingBar() {
                 // Friday Clock
                 if (TimeNow > Convert.ToDateTime("12/9/2016 12:00:01 PM") && TimeNow < Convert.ToDateTime("12/10/2016 12:00:01 AM")) {
                     ShowCounter = 0;
-                    html_markup.Append("<div class='row hidden-xs'><div class='col-md-12 col-lg-12'><div class='col-sm-3 col-md-3 col-lg-3' style='margin-right:-35px; padding:10px'><img width='100%' src='/images/art/dashsalev3.jpg' /></div><div class='col-sm-9 col-md-9 col-lg-9' style='padding-left:15px'><iframe src='https://www.powr.io/plugins/countdown-timer/view?unique_label=76ae9901_1481220709&external_type=iframe' width='100%' height='57.11' frameborder='0'></iframe></font></div></div><br /></div>");
+                    html_markup.Append("<div class='row hidden-xs'><div class='col-md-12 col-lg-12'><div class='col-sm-3 col-md-3 col-lg-3' style='margin-right:-35px; padding:10px'><img  alt='marketing image' width='100%' src='/images/art/dashsalev3.jpg' /></div><div class='col-sm-9 col-md-9 col-lg-9' style='padding-left:15px'><iframe src='https://www.powr.io/plugins/countdown-timer/view?unique_label=76ae9901_1481220709&external_type=iframe' width='100%' height='57.11' frameborder='0'></iframe></font></div></div><br /></div>");
                 } else {
                         //html_markup.Append("<img style='min-height:30px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image[2]).Append("' alt='").Append(marketing_bar_title[2]).Append("'>");
                 }
                 // Saturday Clock
                 if (TimeNow > Convert.ToDateTime("12/10/2016 12:0:01 PM") && TimeNow < Convert.ToDateTime("12/11/2016 12:00:01 AM")) {
                     ShowCounter = 0;
-                    html_markup.Append("<div class='row hidden-xs'><div class='col-md-12 col-lg-12'><div class='col-sm-3 col-md-3 col-lg-3' style='margin-right:-35px; padding:10px'><img width='100%' src='/images/art/dashsalev3.jpg' /></div><div class='col-sm-9 col-md-9 col-lg-9' style='padding-left:15px'><iframe src='https://www.powr.io/plugins/countdown-timer/view?unique_label=edee8a93_1481214334&external_type=iframe' width='100%' height='57.11' frameborder='0'></iframe></font></div></div><br /></div>");
+                    html_markup.Append("<div class='row hidden-xs'><div class='col-md-12 col-lg-12'><div class='col-sm-3 col-md-3 col-lg-3' style='margin-right:-35px; padding:10px'><img  alt='marketing image' width='100%' src='/images/art/dashsalev3.jpg' /></div><div class='col-sm-9 col-md-9 col-lg-9' style='padding-left:15px'><iframe src='https://www.powr.io/plugins/countdown-timer/view?unique_label=edee8a93_1481214334&external_type=iframe' width='100%' height='57.11' frameborder='0'></iframe></font></div></div><br /></div>");
                 } else {
                         //html_markup.Append("<img style='min-height:30px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image[2]).Append("' alt='").Append(marketing_bar_title[2]).Append("'>");
                 }
                 // Sunday Clock
                 if (TimeNow > Convert.ToDateTime("12/11/2016 12:00:01 PM") && TimeNow < Convert.ToDateTime("12/12/2016 12:00:01 AM")) {
                     ShowCounter = 0;
-                    html_markup.Append("<div class='row hidden-xs'><div class='col-md-12 col-lg-12'><div class='col-sm-3 col-md-3 col-lg-3' style='margin-right:-35px; padding:10px'><img width='100%' src='/images/art/dashsalev3.jpg' /></div><div class='col-sm-9 col-md-9 col-lg-9' style='padding-left:15px'><iframe src='https://www.powr.io/plugins/countdown-timer/view?unique_label=a8099e51_1481223103&external_type=iframe' width='100%' height='57.11' frameborder='0'></iframe></font></div></div><br /></div>");
+                    html_markup.Append("<div class='row hidden-xs'><div class='col-md-12 col-lg-12'><div class='col-sm-3 col-md-3 col-lg-3' style='margin-right:-35px; padding:10px'><img  alt='marketing image' width='100%' src='/images/art/dashsalev3.jpg' /></div><div class='col-sm-9 col-md-9 col-lg-9' style='padding-left:15px'><iframe src='https://www.powr.io/plugins/countdown-timer/view?unique_label=a8099e51_1481223103&external_type=iframe' width='100%' height='57.11' frameborder='0'></iframe></font></div></div><br /></div>");
                 } else {
                         //html_markup.Append("<img style='min-height:30px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image[2]).Append("' alt='").Append(marketing_bar_title[2]).Append("'>");
                 }
@@ -362,7 +362,7 @@ protected String GetMarketingBar() {
                                 html_markup.Append("<a href='").Append(marketing_bar_link[i]).Append("' title='").Append(marketing_bar_title[i]).Append("'>");
                             }
 
-                                html_markup.Append("<img style='min-height:50px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image_mobile[i]).Append("' />");
+                                html_markup.Append("<img  alt='marketing image' style='min-height:50px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image_mobile[i]).Append("' />");
 
                             if (marketing_bar_link[i].Trim() != "" && marketing_bar_link[i].Trim() != "#") {
                                 html_markup.Append("</a>");
@@ -418,7 +418,7 @@ protected String GetMarketingBar() {
                                         html_markup.Append("<a class='visible-xs' href=\"").Append(home_slideshow_mobile_link[i]).Append("\" title=\"").Append(home_slideshow_title1[i]).Append("\">");
                                     }
 
-                                    html_markup.Append("<img src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_mobile_image[i]).Append("' />");
+                                    html_markup.Append("<img  alt='marketing image' src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_mobile_image[i]).Append("' />");
 
                                     if (home_slideshow_mobile_link[i].Trim() != "" && home_slideshow_mobile_link[i].Trim() != "#") {
                                         html_markup.Append("</a>");
