@@ -1,0 +1,569 @@
+<script runat="server">
+protected String GetMarketingBar() {
+    //-------------------------------
+    //Marketing Bar
+    //
+    List<String> marketing_bar_image = new List<String>();
+    List<String> marketing_bar_image_mobile = new List<String>();
+    List<String> marketing_bar_title = new List<String>();
+    List<String> marketing_bar_link = new List<String>();
+    String marketing_bar_message = "";
+    //Main Image: 1162 x 30px (can manipulate height)
+    //Mobile Image: 270 x 50px (can manipulate height)
+    //-------------------------------
+
+    marketing_bar_message = "";
+
+
+    marketing_bar_image.Add("181129-mbar.png");
+    marketing_bar_image_mobile.Add("181129-mobile-mbar.png");
+    marketing_bar_title.Add("ALL TREES ON SALE UP TO 40% OFF - SHOP NOW");
+    marketing_bar_link.Add("/live-decorated-trees/c/JP-Live-Decorated-Trees/");
+
+    marketing_bar_image.Add("");
+    marketing_bar_image_mobile.Add("");
+    marketing_bar_title.Add("");
+    marketing_bar_link.Add("");
+
+    marketing_bar_image.Add("");
+    marketing_bar_image_mobile.Add("");
+    marketing_bar_title.Add("");
+    marketing_bar_link.Add("");
+
+    marketing_bar_image.Add("");
+    marketing_bar_image_mobile.Add("");
+    marketing_bar_title.Add("");
+    marketing_bar_link.Add("");
+
+
+
+
+
+    //-------------------------------
+    //Home Slideshow
+    //
+    List<String> home_slideshow_image1 = new List<String>();
+    List<String> home_slideshow_image2 = new List<String>();
+    List<String> home_slideshow_image3 = new List<String>();
+    List<String> home_slideshow_image4 = new List<String>();
+    List<String> home_slideshow_link1 = new List<String>();
+    List<String> home_slideshow_link2 = new List<String>();
+    List<String> home_slideshow_link3 = new List<String>();
+    List<String> home_slideshow_link4 = new List<String>();
+    List<String> home_slideshow_title1 = new List<String>();
+    List<String> home_slideshow_title2 = new List<String>();
+    List<String> home_slideshow_title3 = new List<String>();
+    List<String> home_slideshow_title4 = new List<String>();
+    List<String> home_slideshow_mobile_image = new List<String>();
+    List<String> home_slideshow_mobile_link = new List<String>();
+    //
+    //Notes: - To add more, COPY and PASTE the two variables (image and link) and edit between the quotes
+    //         - To remove, DELETE the two corresponding variables
+    //         - The ORDER reflects the order of the slideshow
+    //
+    //Example:    home_slideshow_image.Add("130716-jp-bulbs-slide.jpg");
+    //        home_slideshow_link.Add("category.aspx?c=JP-Revitalize");
+    //-------------------------------
+
+
+    //Single Video Slide
+    bool show_video_slide = false;
+    int show_video_after_slide_number = 2;
+    String video_slide_image = "151214b-tree-video-slide.jpg";
+    String video_slide_title = "Trending: our live gift plants this holiday season";
+    String video_youtube_code = "rmiIvGzjET4";
+
+
+
+
+//SLIDE BLOCK: START ==========================================
+    home_slideshow_image1.Add("181129-tree-slide.png");
+    home_slideshow_image2.Add("");
+    home_slideshow_image3.Add("");
+    home_slideshow_image4.Add("");
+    //
+    home_slideshow_link1.Add("/live-decorated-trees/c/JP-Live-Decorated-Trees/");
+    home_slideshow_link2.Add("");
+    home_slideshow_link3.Add("");
+    home_slideshow_link4.Add("");
+    //
+    home_slideshow_title1.Add("ALL TREES ON SALE UP TO 40% OFF - SHOP NOW");
+    home_slideshow_title2.Add("");
+    home_slideshow_title3.Add("");
+    home_slideshow_title4.Add("");
+    //
+    home_slideshow_mobile_image.Add("181129-mobile-trees-slide.png");
+    home_slideshow_mobile_link.Add("/live-decorated-trees/c/JP-Live-Decorated-Trees/");
+    //SLIDE BLOCK: END ============================================
+
+
+
+//SLIDE BLOCK: START ==========================================
+    home_slideshow_image1.Add("181016-amaryllis-slide.jpg");
+    home_slideshow_image2.Add("");
+    home_slideshow_image3.Add("");
+    home_slideshow_image4.Add("");
+    //
+    home_slideshow_link1.Add("/amaryllis-bulb-gifts/c/JP-Amaryllis/");
+    home_slideshow_link2.Add("");
+    home_slideshow_link3.Add("");
+    home_slideshow_link4.Add("");
+    //
+    home_slideshow_title1.Add("AMARYLLIS BULB GIFTS - SHOP NOW");
+    home_slideshow_title2.Add("");
+    home_slideshow_title3.Add("");
+    home_slideshow_title4.Add("");
+    //
+    home_slideshow_mobile_image.Add("181109-mobile-amaryllis-slide.png");
+    home_slideshow_mobile_link.Add("/amaryllis-bulb-gifts/c/JP-Amaryllis/");
+    //SLIDE BLOCK: END ============================================
+
+
+
+//SLIDE BLOCK: START ==========================================
+    home_slideshow_image1.Add("181016-holiday-slide.jpg");
+    home_slideshow_image2.Add("");
+    home_slideshow_image3.Add("");
+    home_slideshow_image4.Add("");
+    //
+    home_slideshow_link1.Add("/holiday-gifts/gc/JP-Holiday/");
+    home_slideshow_link2.Add("");
+    home_slideshow_link3.Add("");
+    home_slideshow_link4.Add("");
+    //
+    home_slideshow_title1.Add("NEW and EXCLUSIVE 2018 HOLIDAY COLLECTION - UNWRAP THE HOLIDAYS");
+    home_slideshow_title2.Add("");
+    home_slideshow_title3.Add("");
+    home_slideshow_title4.Add("");
+    //
+    home_slideshow_mobile_image.Add("181109-mobile-holiday-slide.png");
+    home_slideshow_mobile_link.Add("/holiday-gifts/gc/JP-Holiday/");
+    //SLIDE BLOCK: END ============================================
+
+
+
+
+
+
+
+    //-------------------------------
+    //Home Featured Promos (up to 4 sets)
+    //
+    List<String> home_featured_image = new List<String>();
+    List<String> home_featured_link = new List<String>();
+    List<String> home_featured_title = new List<String>();
+    //Notes:
+    //-------------------------------
+
+        home_featured_image.Add("/xl/22868.jpg");
+    home_featured_link.Add("/jp-freeship-holiday/c/JP-Freeship-Holiday/");
+    home_featured_title.Add("GIFTS THAT SHIP FREE");
+
+            home_featured_image.Add("/xl/v2158.jpg");
+    home_featured_link.Add("/jp-holiday-limited-quantity/c/JP-Holiday-Limited-Quantity/");
+    home_featured_title.Add("SELLING OUT FAST");
+
+        home_featured_image.Add("/xl/22734.jpg");
+    home_featured_link.Add("/jp-specials/c/JP-Specials/");
+    home_featured_title.Add("GIFTS ON SALE");
+
+
+
+
+
+
+
+//========================================================================================
+// DO NOT EDIT BELOW THIS LINE ===========================================================
+//========================================================================================
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+    StringBuilder html_markup = new StringBuilder();
+    html_markup.Append("<div class=\"container\">");
+
+        //NOT on Home Page
+        if (!Core.GetCurrentPageName().ToLower().Equals("default.aspx")) {
+
+            //Marketing Bar
+            int marketing_bar_counter = 0;
+            for (int c = 0; c < marketing_bar_image.Count; c++) {
+                if (marketing_bar_image[c].Trim() != ""){
+                    marketing_bar_counter++;
+                }
+            }
+
+            int marketing_bar_mobile_counter = 0;
+            for (int m = 0; m < marketing_bar_image_mobile.Count; m++) {
+                if (marketing_bar_image_mobile[m].Trim() != ""){
+                    marketing_bar_mobile_counter++;
+                }
+            }
+
+            String marketing_bar_column_class = "hidden-xs col-sm-12 col-md-12 col-lg-12";
+            switch (marketing_bar_counter) {
+                case 1:
+                    marketing_bar_column_class = "hidden-xs col-sm-12 col-md-12 col-lg-12";
+                    break;
+                case 2:
+                    marketing_bar_column_class = "hidden-xs col-sm-6 col-md-6 col-lg-6";
+                    break;
+                case 3:
+                    marketing_bar_column_class = "hidden-xs col-sm-4 col-md-4 col-lg-4";
+                    break;
+                case 4:
+                    marketing_bar_column_class = "hidden-xs col-sm-3 col-md-3 col-lg-3";
+                    break;
+                default:
+                    marketing_bar_column_class = "hidden-xs col-sm-12 col-md-12 col-lg-12";
+                    break;
+            }
+
+            String marketing_bar_mobile_column_class = "col-xs-12 hidden-sm hidden-md hidden-lg";
+            switch (marketing_bar_mobile_counter) {
+                case 1:
+                    marketing_bar_mobile_column_class = "col-xs-12 hidden-sm hidden-md hidden-lg";
+                    break;
+                case 2:
+                    marketing_bar_mobile_column_class = "col-xs-6 hidden-sm hidden-md hidden-lg";
+                    break;
+                case 3:
+                    marketing_bar_mobile_column_class = "col-xs-4 hidden-sm hidden-md hidden-lg";
+                    break;
+                case 4:
+                    marketing_bar_mobile_column_class = "col-xs-3 hidden-sm hidden-md hidden-lg";
+                    break;
+                default:
+                    marketing_bar_mobile_column_class = "col-xs-12 hidden-sm hidden-md hidden-lg";
+                    break;
+            }
+            //Build Markup
+            html_markup.Append("<div id='marketing_bar_wrapper' class='row' style='margin:0 2% 0 2% !important;' >");
+
+            //Build section 1
+            if (marketing_bar_image[0].Trim() == ""){
+                //break;
+            }else {
+                if (marketing_bar_image_mobile[0].Trim() == "") {
+              marketing_bar_column_class = marketing_bar_column_class.Replace("col-xs-12", "hidden-xs");
+            }
+                html_markup.Append("<div id='marketing_bar_").Append(0).Append("' style='padding:0px;' class='counter_image_column marketing_bar_div ").Append(marketing_bar_column_class).Append("'>");
+                if (marketing_bar_link[0].Trim() != "" && marketing_bar_link[0].Trim() != "#") {
+            html_markup.Append("<a href='").Append(marketing_bar_link[0]).Append("' title='").Append(marketing_bar_title[0]).Append("'>");
+          }
+                html_markup.Append("<img style='min-height:30px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image[0]).Append("' alt='").Append(marketing_bar_title[0]).Append("'>");
+                if (marketing_bar_link[0].Trim() != "" && marketing_bar_link[0].Trim() != "#") {
+            html_markup.Append("</a>");
+          }
+                html_markup.Append("</div>");
+            }
+            //Build section 2
+            if (marketing_bar_image[1].Trim() == ""){
+                //break;
+            }else {
+                if (marketing_bar_image_mobile[1].Trim() == "") {
+                    marketing_bar_column_class = marketing_bar_column_class.Replace("col-xs-12", "hidden-xs");
+                }
+                html_markup.Append("<div id='marketing_bar_").Append(1).Append("' style='padding:0px;' class='counter_image_column marketing_bar_div ").Append(marketing_bar_column_class).Append("'>");
+                if (marketing_bar_link[1].Trim() != "" && marketing_bar_link[1].Trim() != "#") {
+                    html_markup.Append("<a href='").Append(marketing_bar_link[1]).Append("' title='").Append(marketing_bar_title[1]).Append("'>");
+                }
+                html_markup.Append("<img style='min-height:30px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image[1]).Append("' alt='").Append(marketing_bar_title[1]).Append("'>");
+                if (marketing_bar_link[1].Trim() != "" && marketing_bar_link[1].Trim() != "#") {
+                    html_markup.Append("</a>");
+                }
+                html_markup.Append("</div>");
+            }
+            //Build section 3
+            if (marketing_bar_image[2].Trim() == ""){
+                //break;
+            }else {
+                if (marketing_bar_image_mobile[2].Trim() == "") {
+                    marketing_bar_column_class = marketing_bar_column_class.Replace("col-xs-12", "hidden-xs");
+                }
+                html_markup.Append("<div id='marketing_bar_").Append(2).Append("' style='padding:0px;' class='counter_image_column marketing_bar_div ").Append(marketing_bar_column_class).Append("'>");
+                if (marketing_bar_link[2].Trim() != "" && marketing_bar_link[2].Trim() != "#") {
+                    html_markup.Append("<a href='").Append(marketing_bar_link[2]).Append("' title='").Append(marketing_bar_title[2]).Append("'>");
+                    //html_markup.Append("<a href='/productgroup.aspx?pg=daily-deals-2' title='").Append(marketing_bar_title[2]).Append("'>");
+                }
+                DateTime TimeNow = DateTime.Now;
+                int ShowCounter = 1;
+                // Friday Clock
+                if (TimeNow > Convert.ToDateTime("12/9/2016 12:00:01 PM") && TimeNow < Convert.ToDateTime("12/10/2016 12:00:01 AM")) {
+                    ShowCounter = 0;
+                    html_markup.Append("<div class='row hidden-xs'><div class='col-md-12 col-lg-12'><div class='col-sm-3 col-md-3 col-lg-3' style='margin-right:-35px; padding:10px'><img width='100%' src='/images/art/dashsalev3.jpg' /></div><div class='col-sm-9 col-md-9 col-lg-9' style='padding-left:15px'><iframe src='https://www.powr.io/plugins/countdown-timer/view?unique_label=76ae9901_1481220709&external_type=iframe' width='100%' height='57.11' frameborder='0'></iframe></font></div></div><br /></div>");
+                } else {
+                        //html_markup.Append("<img style='min-height:30px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image[2]).Append("' alt='").Append(marketing_bar_title[2]).Append("'>");
+                }
+                // Saturday Clock
+                if (TimeNow > Convert.ToDateTime("12/10/2016 12:0:01 PM") && TimeNow < Convert.ToDateTime("12/11/2016 12:00:01 AM")) {
+                    ShowCounter = 0;
+                    html_markup.Append("<div class='row hidden-xs'><div class='col-md-12 col-lg-12'><div class='col-sm-3 col-md-3 col-lg-3' style='margin-right:-35px; padding:10px'><img width='100%' src='/images/art/dashsalev3.jpg' /></div><div class='col-sm-9 col-md-9 col-lg-9' style='padding-left:15px'><iframe src='https://www.powr.io/plugins/countdown-timer/view?unique_label=edee8a93_1481214334&external_type=iframe' width='100%' height='57.11' frameborder='0'></iframe></font></div></div><br /></div>");
+                } else {
+                        //html_markup.Append("<img style='min-height:30px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image[2]).Append("' alt='").Append(marketing_bar_title[2]).Append("'>");
+                }
+                // Sunday Clock
+                if (TimeNow > Convert.ToDateTime("12/11/2016 12:00:01 PM") && TimeNow < Convert.ToDateTime("12/12/2016 12:00:01 AM")) {
+                    ShowCounter = 0;
+                    html_markup.Append("<div class='row hidden-xs'><div class='col-md-12 col-lg-12'><div class='col-sm-3 col-md-3 col-lg-3' style='margin-right:-35px; padding:10px'><img width='100%' src='/images/art/dashsalev3.jpg' /></div><div class='col-sm-9 col-md-9 col-lg-9' style='padding-left:15px'><iframe src='https://www.powr.io/plugins/countdown-timer/view?unique_label=a8099e51_1481223103&external_type=iframe' width='100%' height='57.11' frameborder='0'></iframe></font></div></div><br /></div>");
+                } else {
+                        //html_markup.Append("<img style='min-height:30px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image[2]).Append("' alt='").Append(marketing_bar_title[2]).Append("'>");
+                }
+                if (ShowCounter == 1){
+                    html_markup.Append("<img style='min-height:30px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image[2]).Append("' alt='").Append(marketing_bar_title[2]).Append("'>");
+                }
+
+                if (marketing_bar_link[2].Trim() != "" && marketing_bar_link[2].Trim() != "#") {
+                    html_markup.Append("</a>");
+                }
+                html_markup.Append("</div>");
+            }
+
+                for (int i = 0; i < marketing_bar_image_mobile.Count; i++) {
+
+                    if (marketing_bar_image_mobile[i].Trim() == ""){
+                        //break;
+                    }else {
+                        if (marketing_bar_image_mobile[i].Trim() == "") {
+                            marketing_bar_mobile_column_class = marketing_bar_mobile_column_class.Replace("col-xs-12", "hidden-xs");
+                        }
+
+                        html_markup.Append("<div id='marketing_bar_mobile_").Append(i).Append("' style='padding:0px;' class='marketing_bar_div ").Append(marketing_bar_mobile_column_class).Append("'>");
+                            if (marketing_bar_link[i].Trim() != "" && marketing_bar_link[i].Trim() != "#") {
+                                html_markup.Append("<a href='").Append(marketing_bar_link[i]).Append("' title='").Append(marketing_bar_title[i]).Append("'>");
+                            }
+
+                                html_markup.Append("<img style='min-height:50px; width:100%;' src='").Append(Core.GetImageBaseUrl("ART")).Append(marketing_bar_image_mobile[i]).Append("' />");
+
+                            if (marketing_bar_link[i].Trim() != "" && marketing_bar_link[i].Trim() != "#") {
+                                html_markup.Append("</a>");
+                            }
+                        html_markup.Append("</div>");
+                    }
+                }
+            html_markup.Append("</div>");
+        }
+
+        if (marketing_bar_message != "") {
+            html_markup.Append("<div class=\"hidden-xs hidden-sm col-md-12 col-lg-12 text-center\" style=\"padding:9px; background-color:#cc0033; color:#ffffff; font-weight:bold; margin:-12px 0px 12px;\">");
+                html_markup.Append(marketing_bar_message);
+            html_markup.Append("</div>");
+        }
+
+
+        //ONLY on Home Page
+        if (Core.GetCurrentPageName().ToLower().Equals("default.aspx")) {
+            //Home Slideshow --
+            html_markup.Append("<div id=\"home_promos_slideshow\">");
+                html_markup.Append("<ul id=\"slideshow\">");
+                    for (int i = 0; i < home_slideshow_image1.Count; i++) {
+
+                        if (home_slideshow_image1[i] == ""){
+                            break;
+                        }else {
+
+                            //Calculate columns
+                            string home_slideshow_class = "col-xs-12 col-sm-12 col-md-12 col-lg-12";
+                            if (home_slideshow_image1[i] != ""){
+                                home_slideshow_class = "col-xs-12 col-sm-12 col-md-12 col-lg-12";
+                            }
+                            if (home_slideshow_image2[i] != ""){
+                                home_slideshow_class = "col-xs-6 col-sm-6 col-md-6 col-lg-6";
+                            }
+                            if (home_slideshow_image3[i] != ""){
+                                home_slideshow_class = "col-xs-4 col-sm-4 col-md-4 col-lg-4";
+                            }
+                            if (home_slideshow_image4[i] != ""){
+                                home_slideshow_class = "col-xs-3 col-sm-3 col-md-3 col-lg-3";
+                            }
+                            if (home_slideshow_mobile_image[i].Trim() != "") {
+                                //home_slideshow_class = "hidden-xs col-sm-3 col-md-3 col-lg-3";
+                            }
+
+
+                            html_markup.Append("<li>");
+
+                                //Slide section mobile
+                                if (home_slideshow_mobile_image[i].Trim() != "") {
+                                    if (home_slideshow_mobile_link[i].Trim() != "" && home_slideshow_mobile_link[i].Trim() != "#") {
+                                        html_markup.Append("<a class='visible-xs' href=\"").Append(home_slideshow_mobile_link[i]).Append("\" title=\"").Append(home_slideshow_title1[i]).Append("\">");
+                                    }
+
+                                    html_markup.Append("<img src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_mobile_image[i]).Append("' />");
+
+                                    if (home_slideshow_mobile_link[i].Trim() != "" && home_slideshow_mobile_link[i].Trim() != "#") {
+                                        html_markup.Append("</a>");
+                                    }
+                                }
+
+                                //Slide section 1
+                                html_markup.Append("<div style=\"padding:0px !important; margin:0px !important;\" class=\"").Append(home_slideshow_class).Append("\">");
+                                    if (home_slideshow_link1[i].Trim() != "" && home_slideshow_link1[i].Trim() != "#") {
+                                        html_markup.Append("<a href=\"").Append(home_slideshow_link1[i]).Append("\" title=\"").Append(home_slideshow_title1[i]).Append("\">");
+                                    }
+
+                                    if (home_slideshow_mobile_image[i].Trim() != "") {
+                                        html_markup.Append("<img class='hidden-xs' src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_image1[i]).Append("' alt='").Append(home_slideshow_title1[i]).Append("' />");
+                                    }else {
+                                        html_markup.Append("<img src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_image1[i]).Append("' alt='").Append(home_slideshow_title1[i]).Append("' />");
+                                    }
+
+                                    if (home_slideshow_link1[i].Trim() != "" && home_slideshow_link1[i].Trim() != "#") {
+                                        html_markup.Append("</a>");
+                                    }
+                                html_markup.Append("</div>");
+
+                                //Slide section 2
+                                if (home_slideshow_image2[i] != ""){
+                                    html_markup.Append("<div style=\"padding:0px !important; margin:0px !important;\" class=\"").Append(home_slideshow_class).Append("\">");
+                                        if (home_slideshow_link2[i].Trim() != "" && home_slideshow_link2[i].Trim() != "#") {
+                                            html_markup.Append("<a href=\"").Append(home_slideshow_link2[i]).Append("\" title=\"").Append(home_slideshow_title2[i]).Append("\">");
+                                        }
+
+                                        if (home_slideshow_mobile_image[i].Trim() != "") {
+                                            html_markup.Append("<img class='hidden-xs' src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_image2[i]).Append("' alt='").Append(home_slideshow_title2[i]).Append("' />");
+                                        }else {
+                                            html_markup.Append("<img src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_image2[i]).Append("' alt='").Append(home_slideshow_title2[i]).Append("' />");
+                                        }
+
+                                        if (home_slideshow_link2[i].Trim() != "" && home_slideshow_link2[i].Trim() != "#") {
+                                            html_markup.Append("</a>");
+                                        }
+                                    html_markup.Append("</div>");
+                                }
+
+                                //Slide section 3
+                                if (home_slideshow_image3[i] != ""){
+                                    html_markup.Append("<div style=\"padding:0px !important; margin:0px !important;\" class=\"").Append(home_slideshow_class).Append("\">");
+                                        if (home_slideshow_link3[i].Trim() != "" && home_slideshow_link3[i].Trim() != "#") {
+                                            html_markup.Append("<a href=\"").Append(home_slideshow_link3[i]).Append("\" title=\"").Append(home_slideshow_title3[i]).Append("\">");
+                                        }
+
+                                        if (home_slideshow_mobile_image[i].Trim() != "") {
+                                            html_markup.Append("<img class='hidden-xs' src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_image3[i]).Append("' alt='").Append(home_slideshow_title3[i]).Append("' />");
+                                        }else {
+                                            html_markup.Append("<img src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_image3[i]).Append("' alt='").Append(home_slideshow_title3[i]).Append("' />");
+                                        }
+
+                                        if (home_slideshow_link3[i].Trim() != "" && home_slideshow_link3[i].Trim() != "#") {
+                                            html_markup.Append("</a>");
+                                        }
+                                    html_markup.Append("</div>");
+                                }
+
+                                //Slide section 4
+                                if (home_slideshow_image4[i] != ""){
+                                    html_markup.Append("<div style=\"padding:0px !important; margin:0px !important;\" class=\"").Append(home_slideshow_class).Append("\">");
+                                        if (home_slideshow_link4[i].Trim() != "" && home_slideshow_link4[i].Trim() != "#") {
+                                            html_markup.Append("<a href=\"").Append(home_slideshow_link4[i]).Append("\" title=\"").Append(home_slideshow_title4[i]).Append("\">");
+                                        }
+
+                                        if (home_slideshow_mobile_image[i].Trim() != "") {
+                                            html_markup.Append("<img class='hidden-xs' src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_image4[i]).Append("' alt='").Append(home_slideshow_title4[i]).Append("' />");
+                                        }else {
+                                            html_markup.Append("<img src='").Append(Core.GetImageBaseUrl("ART")).Append(home_slideshow_image4[i]).Append("' alt='").Append(home_slideshow_title4[i]).Append("' />");
+                                        }
+
+                                        if (home_slideshow_link4[i].Trim() != "" && home_slideshow_link4[i].Trim() != "#") {
+                                            html_markup.Append("</a>");
+                                        }
+                                    html_markup.Append("</div>");
+                                }
+
+
+                            html_markup.Append("</li>");
+
+
+                            //Video Block (Hard Coded): START
+                            if (i+1 == show_video_after_slide_number && show_video_slide == true) {
+                                html_markup.Append("<li>");
+                                    html_markup.Append("<a class=\"dialog iframe\" title=\"").Append(video_slide_title).Append("\" href=\"https://www.youtube.com/embed/").Append(video_youtube_code).Append("?autoplay=1&fs=1&rel=0\">");
+                                        
+                                    html_markup.Append("</a>");
+                                html_markup.Append("</li>");
+                            }
+                            //Video Block (Hard Coded): END
+
+                        }
+                    }
+                html_markup.Append("</ul>");
+            html_markup.Append("</div>");
+
+            //Home Featured Promos
+            int home_featured_counter = 0;
+            for (int c = 0; c < home_featured_image.Count; c++) {
+                if (home_featured_image[c].Trim() != ""){
+                    home_featured_counter++;
+                }
+            }
+
+            String home_featured_column_class = "col-xs-12 col-sm-12 col-md-12 col-lg-12";
+            switch (home_featured_counter) {
+                case 1:
+                    home_featured_column_class = "col-xs-12 col-sm-12 col-md-12 col-lg-12";
+                    break;
+                case 2:
+                    home_featured_column_class = "col-xs-12 col-sm-6 col-md-6 col-lg-6";
+                    break;
+                case 3:
+                    home_featured_column_class = "col-xs-12 col-sm-4 col-md-4 col-lg-4";
+                    break;
+                case 4:
+                    home_featured_column_class = "col-xs-12 col-sm-6 col-md-3 col-lg-3";
+                    break;
+                default:
+                    home_featured_column_class = "col-xs-12 col-sm-12 col-md-12 col-lg-12";
+                    break;
+            }
+
+            html_markup.Append("<div id=\"home_featured_promos\" class=\"container-fluid\" style=\"padding-top:25px !important;\">");
+                for (int i = 0; i < home_featured_image.Count; i++) {
+                    if (home_featured_image[i] == ""){
+                        break;
+                    }else {
+                        html_markup.Append("<div class=\"").Append(home_featured_column_class).Append("\">");
+                            html_markup.Append("<a style=\"display:block;\"").Append(" href=\"").Append(home_featured_link[i]).Append("\">");
+                                html_markup.Append("<div style=\"padding: 12px;text-align: center;font-size: 18px;border: 1px solid #cecece;color: #3e3e3e;\">").Append(home_featured_title[i]).Append("</div>");
+                                html_markup.Append("<img style=\"width:100%;\" src=\"").Append(Core.GetImageBaseUrl("ROOT")).Append(home_featured_image[i]).Append("\" alt=\"").Append(home_featured_title[i]).Append(" promo\" />");
+                            html_markup.Append("</a>");
+                        html_markup.Append("</div>");
+                    }
+                }
+            html_markup.Append("</div>");
+
+        }
+    html_markup.Append("</div>");
+
+    return html_markup.ToString();
+}
+</script>
+<% =GetMarketingBar()%>
